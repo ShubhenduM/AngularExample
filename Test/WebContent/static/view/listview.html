@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="testApp">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 style="text-align: center;">List View</h1>
+<div ng-controller="testCtrlList">
+		
+		
+		<ul ng-repeat="employee in employees"| filter: 'manager'" >
+			<li>{{employee.role}}
+				<ul>
+					<li>{{employee.name}}
+						<ul>
+							<li>Team
+
+								<ul style="list-style-type: disc;">
+									<li ng-repeat="team in employee.team">{{team.name}},{{team.role}}</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="my-class">
+	<a href="home">Back</a>
+	</div>
+</body>
+</html>

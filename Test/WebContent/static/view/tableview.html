@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="testApp">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+function alternate(id){ 
+	  if(document.getElementsByTagName){  
+	    var table = document.getElementById(id);   
+	    var rows = table.getElementsByTagName("tr");   
+	    for(i = 0; i < rows.length; i++){           
+	  //manipulate rows 
+	      if(i % 2 == 0){ 
+	        rows[i].className = "even"; 
+	      }else{ 
+	        rows[i].className = "odd"; 
+	      }       
+	    } 
+	  } 
+	}
+ 
+</script>
+
+</head>
+<body onload="alternate('.table-bordered')" >
+ <div ng-controller="testCtrl" id="table_head">
+		<h1>Tabular View</h1>
+		
+		<table class="table table-striped table-bordered table-inverse" style="width: 50%;margin-top: 1%;margin-left: 309px;">
+			<thead class="thead-inverse"
+				style="color: #fff; background-color: #73879c;">
+				<tr>
+					<th>Name</th>
+					<th>Role</th>
+					<th>Team</th>
+				</tr>
+			</thead>
+			<tr ng-repeat="employee in employees | orderBy:'-'"">
+				<td>{{employee.name}}</td>
+				<td>{{employee.role}}</td>
+				<td>{{employee.team}}</td>
+			</tr>
+		</table>
+		<div class="my-class">
+		<a href="home">Back</a>
+		</div>
+	</div>
+</body>
+</html>

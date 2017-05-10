@@ -1,0 +1,16 @@
+#table_head h1 {
+    text-align: center;
+}
+#list_head h1 {
+    text-align: center;
+}
+.odd{background-color: #000 !important;} 
+.even{background-color: gray !important;} 
+  
+ .table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: rgba(157, 157, 157, 0.28);
+}
+
+.my-class {
+  text-align: center;
+}
