@@ -27,50 +27,6 @@
 
 <!-- Tabular -->
 <body>
-	<!-- <div ng-controller="testCtrl" id="table_head">
-		<h1>Tabular View</h1>
-		<input type="button" value="GetDataTable"
-			ng-click="populateSampleData()">
-		{{employees}}
-		<table class="table table-striped table-bordered table-inverse" style="width: 50%;margin-top: 1%;">
-			<thead class="thead-inverse"
-				style="color: #fff; background-color: #73879c;">
-				<tr>
-					<th>Name</th>
-					<th>Role</th>
-					<th>Team</th>
-				</tr>
-			</thead>
-			<tr ng-repeat="employee in employees | orderBy:'-'"">
-				<td>{{employee.name}}</td>
-				<td>{{employee.role}}</td>
-				<td>{{employee.team}}</td>
-			</tr>
-		</table>
-	</div>
-
-List 
-	<div ng-controller="testCtrlList" id="list_head">
-		<h1>List View</h1>
-		<input type="button" value="GetDataList"
-			ng-click="populateSampleDataList()">
-		<ul ng-repeat="employee in employees"| filter: 'manager'" >
-			<li>{{employee.role}}
-				<ul>
-					<li>{{employee.name}}
-						<ul>
-							<li>team
-
-								<ul style="list-style-type: disc;">
-									<li ng-repeat="team in employee.team">{{team.name}},{{team.role}}</li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</li>
-		</ul>
-	</div> -->
 	<div ng-view></div>
 </body>
 </html>
